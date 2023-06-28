@@ -142,9 +142,6 @@ class Script(scripts.Script):
             pixel_image = process_image(processed.images[i])
             processed.images.append(pixel_image)
 
-            images.save_image(processed.images[i], p.outpath_samples, "",
-            processed.seed + i, processed.prompt, opts.samples_format, info= processed.info, p=p)
-
             images.save_image(pixel_image, p.outpath_samples, "pixel",
             processed.seed + i, processed.prompt, opts.samples_format, info= processed.info, p=p)
 
