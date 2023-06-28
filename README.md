@@ -91,6 +91,8 @@ Simple black and white mode
 ![Custom color palette tab interface](examples/custom_palette_tab.png)
 This mode allows to paint image with colors from another image. If palette included in image, like palettes from [lospec]([url](https://lospec.com/palette-list)), script will automatically apply it, overwise you can select palette size manually with **Palette Size (only for complex images)** slider.
 
+https://github.com/mrreplicart/sd-webui-pixelart/assets/137555918/2ab3be33-3229-4eeb-8d01-65c231398e0d
+
 <details>
   <summary>Custom palette examples</summary>
 
