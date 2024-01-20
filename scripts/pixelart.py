@@ -3,6 +3,7 @@ import gradio as gr
 import modules.scripts as scripts
 from modules import images
 from modules.shared import opts
+from modules.ui_components import InputAccordion
 
 from sd_webui_pixelart.utils import DITHER_METHODS, QUANTIZATION_METHODS, downscale_image, limit_colors, resize_image, convert_to_black_and_white, convert_to_grayscale
 
@@ -19,10 +20,7 @@ class Script(scripts.Script):
         quantization_methods = ['Median cut', 'Maximum coverage', 'Fast octree']
         dither_methods = ['None', 'Floyd-Steinberg']
 
-        with gr.Accordion("Pixel art", open=False):
-            with gr.Row():
-                enabled = gr.Checkbox(label="Enable", value=False)
-
+        with InputAccordion(False, label="Pixel art") as enabled:
             with gr.Column():
                 with gr.Row():
                     downscale = gr.Slider(label="Downscale", minimum=1, maximum=32, step=2, value=8)
